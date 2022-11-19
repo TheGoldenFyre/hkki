@@ -1,6 +1,18 @@
-Hakuoki script file format(uncompressed)
-========================================
+# Installation
+On any Ubuntu based operating system, run the following: 
+```
+sudo apt install git
+git clone https://github.com/this/repo
 
+sudo apt install libgtk2.0-dev
+sudo apt install make
+cd hkki
+make
+./hkki
+```
+This should install all dependencies, build, and run the executable.
+
+# Hakuoki script file format(uncompressed)
 
 General weirdness:
 -----------------
