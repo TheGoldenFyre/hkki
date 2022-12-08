@@ -114,6 +114,17 @@ void text_entity::set_line_utf8(int index, gchar* new_line)
     lines_utf8[index] = line;
 }
 
+void text_entity::set_name_utf8(gchar* new_name)
+{
+    int new_len = strlen(new_name)+1;
+    g_free(name_utf8);
+    name_utf8 = (gchar*)g_malloc(new_len);
+    if(name_utf8==NULL){
+        perror("error on names malloc");
+    }
+    memcpy(name_utf8, new_name, new_len);
+}
+
 void text_entity::reinsert_lines()
 {
     if(name_utf8!=NULL){
@@ -174,6 +185,7 @@ void text_entity::write_plaintext_to(FILE* f)
 {
     if(name_utf8!=NULL){
         fprintf(f,"said by: %s\n",name_utf8);
+        printf("%s", name_utf8);
     }
     for(int i=0; i<linecount; ++i){
         fprintf(f, "%s\n", lines_utf8[i]);

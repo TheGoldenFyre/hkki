@@ -90,7 +90,9 @@ class stcm2l_file
     
     void selected_text(int index);
     
-    void set_textline(int index, gchar* new_line);
+    void set_textline(int index, gchar* new_line);    
+    void set_name(gchar* new_name);
+
     
     void sync_texts();
     
@@ -100,6 +102,8 @@ class stcm2l_file
     int is_open(){
         return inf!=NULL;
     }
+    
+    int curr_text() { return current_text; }
     
     void set_liststore(GtkListStore* ls){
         liststore=ls;

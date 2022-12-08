@@ -81,7 +81,9 @@ class text_entity
         return linecount;
     }
     
-    void set_line_utf8(int index, gchar* new_line);
+    void set_line_utf8(int index, gchar* new_line);    
+    void set_name_utf8(gchar* new_name);
+    
     void write_plaintext_to(FILE* f);
 };
 

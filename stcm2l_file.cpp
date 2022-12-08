@@ -355,6 +355,11 @@ void stcm2l_file::set_textline(int index, gchar* new_line)
     selected_text(current_text);
 }
 
+void stcm2l_file::set_name(gchar* new_name) {
+    texts[current_text]->set_name_utf8(new_name);
+    // clear_editstore();
+}
+
 void stcm2l_file::sync_texts()
 {
     vector<text_entity*>::iterator it;
@@ -386,7 +391,7 @@ int stcm2l_file::write(const char* ofname)
     actions_write(of, start);
     fwrite("EXPORT_DATA", 1, 12, of);
     exports_write(of);
-    printf("Export was toch wel gewrite losers gepranked");
+    printf("Export was toch wel gewrite losers gepranked\n");
         
     fclose(of);
 
@@ -406,6 +411,7 @@ int stcm2l_file::export_plaintext(const char* ofname)
 
     for(it=texts.begin(); it!=texts.end(); ++it){
         fprintf(of, "Box %d\n", ++i);
+        printf("hello?");
         (*it)->write_plaintext_to(of);
         fprintf(of,"\n");
     }

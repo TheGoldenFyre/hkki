@@ -31,6 +31,8 @@ or implied, of Matthias Lanzinger.
 #include "stcm2l_file.h"
 #include "backward.hpp"
 
+GtkTreeView* tv1;
+
 extern "C" G_MODULE_EXPORT void
 on_save_button_clicked(GtkButton*   button,
                        gpointer     user_data)
@@ -106,6 +108,15 @@ on_text_list_row_activated(GtkTreeView       *tree_view,
     stcm2l_file* file = (stcm2l_file*)user_data;
     gint* indices = gtk_tree_path_get_indices(path);
     file->selected_text(indices[0]);
+}
+
+
+extern "C" G_MODULE_EXPORT void
+on_name_edited(GtkEntry* self,
+               gpointer user_data
+) {
+    stcm2l_file* file = (stcm2l_file*)user_data;
+    file->set_name((char*)gtk_entry_get_text(self));
 }
 
 
@@ -213,7 +224,6 @@ int main(int argc, char** argv)
     GtkWidget* window;
     GtkListStore* ls, *es;
     GtkEntry* nb;
-    GtkTreeView* tv1;
     GError* error = NULL;
     static stcm2l_file file;
     

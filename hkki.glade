@@ -123,8 +123,9 @@
                       <object class="GtkEntry" id="name">
                         <property name="visible">True</property>
                         <property name="can_focus">True</property>
-                        <property name="editable">False</property>
+                        <property name="editable">True</property>
                         <property name="invisible_char">&#x25CF;</property>
+                        <signal name="backspace" handler="on_name_edited"/>
                       </object>
                       <packing>
                         <property name="expand">False</property>

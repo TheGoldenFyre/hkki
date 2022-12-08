@@ -1,0 +1,94 @@
+g++ `pkg-config --cflags gtk+-2.0 gmodule-2.0 glib-2.0` -Wall  -c main.cpp -o main.o
+In file included from /usr/include/gtk-2.0/gtk/gtkobject.h:37,
+                 from /usr/include/gtk-2.0/gtk/gtkwidget.h:36,
+                 from /usr/include/gtk-2.0/gtk/gtkcontainer.h:35,
+                 from /usr/include/gtk-2.0/gtk/gtkbin.h:35,
+                 from /usr/include/gtk-2.0/gtk/gtkwindow.h:36,
+                 from /usr/include/gtk-2.0/gtk/gtkdialog.h:35,
+                 from /usr/include/gtk-2.0/gtk/gtkaboutdialog.h:32,
+                 from /usr/include/gtk-2.0/gtk/gtk.h:33,
+                 from main.cpp:30:
+/usr/include/gtk-2.0/gtk/gtktypeutils.h:236:64: warning: ‘GTypeDebugFlags’ is deprecated [-Wdeprecated-declarations]
+  236 | void            gtk_type_init   (GTypeDebugFlags    debug_flags);
+      |                                                                ^
+In file included from /usr/include/glib-2.0/gobject/gobject.h:26,
+                 from /usr/include/glib-2.0/gobject/gbinding.h:31,
+                 from /usr/include/glib-2.0/glib-object.h:24,
+                 from /usr/include/glib-2.0/gio/gioenums.h:30,
+                 from /usr/include/glib-2.0/gio/giotypes.h:30,
+                 from /usr/include/glib-2.0/gio/gio.h:28,
+                 from /usr/include/gtk-2.0/gdk/gdkapplaunchcontext.h:30,
+                 from /usr/include/gtk-2.0/gdk/gdk.h:32,
+                 from /usr/include/gtk-2.0/gtk/gtk.h:32:
+/usr/include/glib-2.0/gobject/gtype.h:706:3: note: declared here
+  706 | } GTypeDebugFlags GLIB_DEPRECATED_TYPE_IN_2_36;
+      |   ^~~~~~~~~~~~~~~
+In file included from /usr/include/gtk-2.0/gtk/gtktoolitem.h:31,
+                 from /usr/include/gtk-2.0/gtk/gtktoolbutton.h:30,
+                 from /usr/include/gtk-2.0/gtk/gtkmenutoolbutton.h:30,
+                 from /usr/include/gtk-2.0/gtk/gtk.h:126:
+/usr/include/gtk-2.0/gtk/gtktooltips.h:73:12: warning: ‘GTimeVal’ is deprecated: Use 'GDateTime' instead [-Wdeprecated-declarations]
+   73 |   GTimeVal last_popdown;
+      |            ^~~~~~~~~~~~
+In file included from /usr/include/glib-2.0/glib/galloca.h:34,
+                 from /usr/include/glib-2.0/glib.h:32,
+                 from /usr/include/glib-2.0/gobject/gbinding.h:30:
+/usr/include/glib-2.0/glib/gtypes.h:574:26: note: declared here
+  574 | typedef struct _GTimeVal GTimeVal GLIB_DEPRECATED_TYPE_IN_2_62_FOR(GDateTime);
+      |                          ^~~~~~~~
+g++ `pkg-config --cflags gtk+-2.0 gmodule-2.0 glib-2.0` -Wall  -c action.cpp -o action.o
+g++ `pkg-config --cflags gtk+-2.0 gmodule-2.0 glib-2.0` -Wall  -c stcm2l_file.cpp -o stcm2l_file.o
+In file included from /usr/include/gtk-2.0/gtk/gtkobject.h:37,
+                 from /usr/include/gtk-2.0/gtk/gtkwidget.h:36,
+                 from /usr/include/gtk-2.0/gtk/gtkcontainer.h:35,
+                 from /usr/include/gtk-2.0/gtk/gtkbin.h:35,
+                 from /usr/include/gtk-2.0/gtk/gtkwindow.h:36,
+                 from /usr/include/gtk-2.0/gtk/gtkdialog.h:35,
+                 from /usr/include/gtk-2.0/gtk/gtkaboutdialog.h:32,
+                 from /usr/include/gtk-2.0/gtk/gtk.h:33,
+                 from stcm2l_file.h:37,
+                 from stcm2l_file.cpp:29:
+/usr/include/gtk-2.0/gtk/gtktypeutils.h:236:64: warning: ‘GTypeDebugFlags’ is deprecated [-Wdeprecated-declarations]
+  236 | void            gtk_type_init   (GTypeDebugFlags    debug_flags);
+      |                                                                ^
+In file included from /usr/include/glib-2.0/gobject/gobject.h:26,
+                 from /usr/include/glib-2.0/gobject/gbinding.h:31,
+                 from /usr/include/glib-2.0/glib-object.h:24,
+                 from /usr/include/glib-2.0/gio/gioenums.h:30,
+                 from /usr/include/glib-2.0/gio/giotypes.h:30,
+                 from /usr/include/glib-2.0/gio/gio.h:28,
+                 from /usr/include/gtk-2.0/gdk/gdkapplaunchcontext.h:30,
+                 from /usr/include/gtk-2.0/gdk/gdk.h:32,
+                 from /usr/include/gtk-2.0/gtk/gtk.h:32:
+/usr/include/glib-2.0/gobject/gtype.h:706:3: note: declared here
+  706 | } GTypeDebugFlags GLIB_DEPRECATED_TYPE_IN_2_36;
+      |   ^~~~~~~~~~~~~~~
+In file included from /usr/include/gtk-2.0/gtk/gtktoolitem.h:31,
+                 from /usr/include/gtk-2.0/gtk/gtktoolbutton.h:30,
+                 from /usr/include/gtk-2.0/gtk/gtkmenutoolbutton.h:30,
+                 from /usr/include/gtk-2.0/gtk/gtk.h:126:
+/usr/include/gtk-2.0/gtk/gtktooltips.h:73:12: warning: ‘GTimeVal’ is deprecated: Use 'GDateTime' instead [-Wdeprecated-declarations]
+   73 |   GTimeVal last_popdown;
+      |            ^~~~~~~~~~~~
+In file included from /usr/include/glib-2.0/glib/galloca.h:34,
+                 from /usr/include/glib-2.0/glib.h:32,
+                 from /usr/include/glib-2.0/gobject/gbinding.h:30:
+/usr/include/glib-2.0/glib/gtypes.h:574:26: note: declared here
+  574 | typedef struct _GTimeVal GTimeVal GLIB_DEPRECATED_TYPE_IN_2_62_FOR(GDateTime);
+      |                          ^~~~~~~~
+stcm2l_file.cpp: In member function ‘int stcm2l_file::exports_write(FILE*)’:
+stcm2l_file.cpp:75:18: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘action*’ [-Wformat=]
+   75 |         printf("%d", (*it).exported_action);
+      |                 ~^   ~~~~~~~~~~~~~~~~~~~~~
+      |                  |         |
+      |                  int       action*
+stcm2l_file.cpp: In member function ‘int stcm2l_file::read_actions()’:
+stcm2l_file.cpp:245:19: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘std::vector<export_data>::size_type’ {aka ‘long unsigned int’} [-Wformat=]
+  245 |     printf("Have %d exports\n", exports.size());
+      |                  ~^             ~~~~~~~~~~~~~~
+      |                   |                         |
+      |                   int                       std::vector<export_data>::size_type {aka long unsigned int}
+      |                  %ld
+g++ `pkg-config --cflags gtk+-2.0 gmodule-2.0 glib-2.0` -Wall  -c text_entity.cpp -o text_entity.o
+g++ `pkg-config --cflags gtk+-2.0 gmodule-2.0 glib-2.0` -Wall  -c compress.cpp -o compress.o
+g++ -o hkki main.o action.o stcm2l_file.o text_entity.o compress.o  `pkg-config --libs gtk+-2.0 gmodule-2.0 glib-2.0`
